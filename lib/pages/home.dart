@@ -1,5 +1,6 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:travel_app_flutter/constants/textstyles.dart';
@@ -75,7 +76,7 @@ class HomePage extends StatelessWidget {
                         height: 36.h,
                         child: CircleAvatar(
                           backgroundImage:
-                              AssetImage("assets/images/profil.png"),
+                              AssetImage("assets/images/profil2.png"),
                           backgroundColor: Colors.transparent,
                         ),
                       ),
@@ -117,6 +118,85 @@ class HomePage extends StatelessWidget {
                   SizedBox(
                     height: 22.h,
                   ),
+                  Row(
+                    children: [
+                      Stack(
+                        alignment: AlignmentDirectional.bottomCenter,
+                        children: [
+                          Container(
+                            width: 222.w,
+                            height: 143.h,
+                            // child: Image.asset("a"),
+                            decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 235, 235, 235),
+                              borderRadius: BorderRadius.circular(13),
+                              image: DecorationImage(
+                                image: AssetImage("assets/images/Rinjani.png"),
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: 52.h,
+                            width: 222.w,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(13),
+                                bottomRight: Radius.circular(13),
+                              ),
+                              color: Colors.transparent,
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.only(
+                                  right: 14.w,
+                                  left: 14.w,
+                                  top: 6.h,
+                                  bottom: 12.h),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Rinjani Mountain",
+                                        style: AppTextStyle.defaultHeaderThree
+                                            .copyWith(
+                                          color: AppColor.thirdTextColor,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 4.h,
+                                      ),
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            Icons.location_on,
+                                            color: AppColor.thirdTextColor,
+                                            size: 10,
+                                          ),
+                                          SizedBox(
+                                            width: 4.w,
+                                          ),
+                                          Text(
+                                            "Lombok Indonesia",
+                                            style: AppTextStyle.loca2,
+                                          )
+                                        ],
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                          // child: Text("Halo"),
+                        ],
+                      )
+                    ],
+                  )
                 ],
               ),
             ),

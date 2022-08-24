@@ -69,6 +69,13 @@ class AppTextStyle {
         color: AppColor.textColor,
         // height: 1.6,
       );
+  static TextStyle get loca2 => TextStyle(
+      fontSize: 10.sp,
+      fontWeight: FontWeight.w600,
+      fontFamily: FontFamily.primary,
+      color: AppColor.thirdTextColor
+      // height: 1.6,
+      );
   static TextStyle get category => TextStyle(
         fontSize: 12.sp,
         fontWeight: FontWeight.w600,
