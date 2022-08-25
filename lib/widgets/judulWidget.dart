@@ -30,7 +30,7 @@ class JudulWidget extends StatelessWidget {
         Icon(
           Icons.arrow_forward,
           color: AppColor.primaryColor,
-          size: 12,
+          size: 12.r,
         )
       ],
     );

@@ -17,7 +17,7 @@ class CategoryWidget extends StatelessWidget {
         height: 38.h,
         decoration: BoxDecoration(
           color: AppColor.bgColor,
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(10.r),
         ),
         child: MaterialButton(
           padding: EdgeInsets.symmetric(horizontal: 14.w, vertical: 9.h),

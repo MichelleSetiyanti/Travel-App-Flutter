@@ -9,6 +9,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:travel_app_flutter/widgets/categoryWidget.dart';
 import 'package:travel_app_flutter/widgets/judulWidget.dart';
 
+import '../widgets/categoryItem.dart';
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,7 @@ class HomePage extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: AppColor.bgColor,
                           borderRadius: BorderRadius.all(
-                            Radius.circular(8),
+                            Radius.circular(8.r),
                           ),
                         ),
                         child: IconButton(
@@ -57,7 +59,7 @@ class HomePage extends StatelessWidget {
                               Icon(
                                 Icons.location_on,
                                 color: AppColor.primaryColor,
-                                size: 14,
+                                size: 14.r,
                               ),
                               SizedBox(
                                 width: 4.w,
@@ -118,84 +120,67 @@ class HomePage extends StatelessWidget {
                   SizedBox(
                     height: 22.h,
                   ),
-                  Row(
-                    children: [
-                      Stack(
-                        alignment: AlignmentDirectional.bottomCenter,
-                        children: [
-                          Container(
-                            width: 222.w,
-                            height: 143.h,
-                            // child: Image.asset("a"),
-                            decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 235, 235, 235),
-                              borderRadius: BorderRadius.circular(13),
-                              image: DecorationImage(
-                                image: AssetImage("assets/images/Rinjani.png"),
-                                fit: BoxFit.fill,
-                              ),
-                            ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        CategoryItem(
+                            gambar: 'assets/images/Rinjani.png',
+                            harga: '36',
+                            judul: "Rinjani Mountain",
+                            tempat: "Lombok, Indonesia"),
+                        SizedBox(
+                          width: 12.w,
+                        ),
+                        CategoryItem(
+                            gambar: 'assets/images/Bromo.png',
+                            harga: '20',
+                            judul: "Bromo Mountain",
+                            tempat: "East Java, Indonesia"),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 36.h,
+                  ),
+                  JudulWidget(judul: "Popular Destination"),
+                  SizedBox(
+                    height: 22.h,
+                  ),
+                  Container(
+                    height: 109.h,
+                    width: 325.w,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12.r),
+                      color: Colors.amber,
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.all(12.r),
+                      child: Row(children: [
+                        Container(
+                          width: 95.w,
+                          height: 85.h,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(9.r),
+                            color: Colors.black,
                           ),
-                          Container(
-                            height: 52.h,
-                            width: 222.w,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(13),
-                                bottomRight: Radius.circular(13),
-                              ),
-                              color: Colors.transparent,
+                        ),
+                        SizedBox(
+                          width: 14.w,
+                        ),
+                        Expanded(
+                            child: Column(
+                          // mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "The Pink Beach",
+                              style: AppTextStyle.defaultHeaderOne,
                             ),
-                            child: Padding(
-                              padding: EdgeInsets.only(
-                                  right: 14.w,
-                                  left: 14.w,
-                                  top: 6.h,
-                                  bottom: 12.h),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        "Rinjani Mountain",
-                                        style: AppTextStyle.defaultHeaderThree
-                                            .copyWith(
-                                          color: AppColor.thirdTextColor,
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        height: 4.h,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Icon(
-                                            Icons.location_on,
-                                            color: AppColor.thirdTextColor,
-                                            size: 10,
-                                          ),
-                                          SizedBox(
-                                            width: 4.w,
-                                          ),
-                                          Text(
-                                            "Lombok Indonesia",
-                                            style: AppTextStyle.loca2,
-                                          )
-                                        ],
-                                      )
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                          // child: Text("Halo"),
-                        ],
-                      )
-                    ],
+                          ],
+                        ))
+                      ]),
+                    ),
                   )
                 ],
               ),
