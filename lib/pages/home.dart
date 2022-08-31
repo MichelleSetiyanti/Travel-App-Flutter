@@ -147,41 +147,6 @@ class HomePage extends StatelessWidget {
                   SizedBox(
                     height: 22.h,
                   ),
-                  Container(
-                    height: 109.h,
-                    width: 325.w,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12.r),
-                      color: Colors.amber,
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.all(12.r),
-                      child: Row(children: [
-                        Container(
-                          width: 95.w,
-                          height: 85.h,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(9.r),
-                            color: Colors.black,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 14.w,
-                        ),
-                        Expanded(
-                            child: Column(
-                          // mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "The Pink Beach",
-                              style: AppTextStyle.defaultHeaderOne,
-                            ),
-                          ],
-                        ))
-                      ]),
-                    ),
-                  )
                 ],
               ),
             ),
