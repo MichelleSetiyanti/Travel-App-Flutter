@@ -36,7 +36,7 @@ class CategoryItem extends StatelessWidget {
           ),
         ),
         Container(
-          height: 52.h,
+          // height: 52.h,
           width: 222.w,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.only(
