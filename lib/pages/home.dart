@@ -147,11 +147,106 @@ class HomePage extends StatelessWidget {
                   SizedBox(
                     height: 22.h,
                   ),
+                  PopularWidget()
                 ],
               ),
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class PopularWidget extends StatelessWidget {
+  const PopularWidget({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 109.h,
+      width: 325.w,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12.r),
+        color: Colors.white,
+      ),
+      child: Padding(
+        padding: EdgeInsets.all(12.r),
+        child: Row(children: [
+          Container(
+            width: 95.w,
+            height: 85.h,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(9.r),
+              // color: Colors.black,
+              image: DecorationImage(
+                image: AssetImage("assets/images/Pink.png"),
+                fit: BoxFit.fill,
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 14.w,
+          ),
+          Expanded(
+              child: Column(
+            // mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "The Pink Beach",
+                style: AppTextStyle.defaultHeaderTwo,
+              ),
+              SizedBox(
+                height: 6.h,
+              ),
+              Row(
+                children: [
+                  Icon(
+                    Icons.location_on,
+                    color: AppColor.primaryColor,
+                    size: 10.r,
+                  ),
+                  SizedBox(
+                    width: 4.w,
+                  ),
+                  Text(
+                    "Komodo Island, Indonesia",
+                    style: AppTextStyle.loca2
+                        .copyWith(color: AppColor.primaryColor),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 6.h,
+              ),
+              Text(
+                  "This exceptional beach gets its striking color from microscopic animals called...",
+                  style: AppTextStyle.desc),
+              SizedBox(
+                height: 6.h,
+              ),
+              Row(
+                children: [
+                  Text(
+                    "\$ 48",
+                    style: AppTextStyle.defaultHeaderThree,
+                  ),
+                  SizedBox(
+                    width: 4.w,
+                  ),
+                  Text(
+                    "\/Person",
+                    style: AppTextStyle.smallText
+                        .copyWith(color: AppColor.secondTextColor),
+                  )
+                ],
+              ),
+            ],
+          ))
+        ]),
       ),
     );
   }
