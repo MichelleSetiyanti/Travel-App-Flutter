@@ -3,9 +3,11 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:travel_app_flutter/app_routes.dart';
 import 'package:travel_app_flutter/constants/textstyles.dart';
 import 'package:travel_app_flutter/constants/app_color.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:travel_app_flutter/pages/favourite/favourite.dart';
 import 'package:travel_app_flutter/widgets/categoryWidget.dart';
 import 'package:travel_app_flutter/widgets/judulWidget.dart';
 import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
@@ -33,7 +35,7 @@ class HomePage extends StatelessWidget {
                     children: [
                       Container(
                         width: 36.w,
-                        height: 36.h,
+                        height: 40.h,
                         decoration: BoxDecoration(
                           color: AppColor.bgColor,
                           borderRadius: BorderRadius.all(
@@ -131,7 +133,8 @@ class HomePage extends StatelessWidget {
                             gambar: 'assets/images/Rinjani.png',
                             harga: '36',
                             judul: "Rinjani Mountain",
-                            tempat: "Lombok, Indonesia"),
+                            tempat: "Lombok, Indonesia",
+                            pages: AppRoutes.detail),
                         SizedBox(
                           width: 12.w,
                         ),
@@ -139,7 +142,8 @@ class HomePage extends StatelessWidget {
                             gambar: 'assets/images/Bromo.png',
                             harga: '20',
                             judul: "Bromo Mountain",
-                            tempat: "East Java, Indonesia"),
+                            tempat: "East Java, Indonesia",
+                            pages: AppRoutes.detail),
                       ],
                     ),
                   ),

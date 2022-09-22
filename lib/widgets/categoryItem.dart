@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import '../constants/app_color.dart';
 import '../constants/textstyles.dart';
@@ -9,12 +10,14 @@ class CategoryItem extends StatelessWidget {
   final String tempat;
   final String harga;
   final String gambar;
+  final String pages;
 
   CategoryItem({
     required this.judul,
     required this.tempat,
     required this.harga,
     required this.gambar,
+    required this.pages,
   });
 
   @override
@@ -25,7 +28,16 @@ class CategoryItem extends StatelessWidget {
         Container(
           width: 222.w,
           height: 143.h,
-          // child: Image.asset("a"),
+          child: Material(
+            color: Colors.transparent,
+            borderRadius: BorderRadius.circular(13.r),
+            child: InkWell(
+              onTap: () {
+                Get.toNamed(pages);
+              },
+              splashColor: Color.fromARGB(255, 245, 242, 242),
+            ),
+          ),
           decoration: BoxDecoration(
             color: Color.fromARGB(255, 235, 235, 235),
             borderRadius: BorderRadius.circular(13.r),
