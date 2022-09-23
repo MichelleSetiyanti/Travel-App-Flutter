@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -53,6 +55,6 @@ Widget AppDisplayPage({int index = 0}) {
     case 3:
       return ProfilePage();
     default:
-      return HomePage();
+      return BarPage();
   }
 }

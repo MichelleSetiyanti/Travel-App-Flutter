@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class previewImage extends StatelessWidget {
-  previewImage({required this.image});
+class PreviewImage extends StatelessWidget {
+  PreviewImage({required this.image});
 
   final String image;
   @override

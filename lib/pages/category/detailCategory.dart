@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:travel_app_flutter/constants/textstyles.dart';
 import 'package:travel_app_flutter/widgets/previewImage.dart';
@@ -203,13 +202,13 @@ class DetailPage extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         children: [
-                          previewImage(image: "assets/images/rinjani-4.png"),
+                          PreviewImage(image: "assets/images/rinjani-4.png"),
                           SizedBox(width: 12.w),
-                          previewImage(image: "assets/images/rinjani-3.png"),
+                          PreviewImage(image: "assets/images/rinjani-3.png"),
                           SizedBox(width: 12.w),
-                          previewImage(image: "assets/images/rinjani-2.png"),
+                          PreviewImage(image: "assets/images/rinjani-2.png"),
                           SizedBox(width: 12.w),
-                          previewImage(image: "assets/images/rinjani-1.png"),
+                          PreviewImage(image: "assets/images/rinjani-1.png"),
                           SizedBox(width: 12.w),
                         ],
                       ),

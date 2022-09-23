@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:travel_app_flutter/pages/bar.dart';
 import 'package:travel_app_flutter/pages/home/home.dart';
 import 'package:travel_app_flutter/app_routes.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: HomePage(),
+        home: BarPage(),
         debugShowCheckedModeBanner: false,
         initialRoute: AppRoutes.bar,
         getPages: AppPages.pages,

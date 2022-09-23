@@ -2,15 +2,12 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 import 'package:travel_app_flutter/app_routes.dart';
 import 'package:travel_app_flutter/constants/textstyles.dart';
 import 'package:travel_app_flutter/constants/app_color.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:travel_app_flutter/pages/favourite/favourite.dart';
 import 'package:travel_app_flutter/widgets/categoryWidget.dart';
 import 'package:travel_app_flutter/widgets/judulWidget.dart';
-import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 
 import '../../widgets/categoryItem.dart';
 import '../../widgets/popularWidget.dart';
